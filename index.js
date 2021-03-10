@@ -1,5 +1,5 @@
 // import register from "./routes/index";
-const register = require("./routes/index.js");
+const routes = require("./routes/index.js");
 
 const express = require("express");
 const cors = require("cors");
@@ -13,7 +13,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-register.register(app);
+routes.register(app);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
